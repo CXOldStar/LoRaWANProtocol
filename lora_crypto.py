@@ -3,11 +3,11 @@ import os
 
 
 class LoRaCrypto:
+    sys_path = os.path.dirname(os.path.realpath(__file__))
     if os.name == 'nt':
-        sys_path = os.path.dirname(os.path.abspath('lora_encrypt'))
         Crypto = CDLL(sys_path + "\DLLs\LoRaMacCrypto.dll")
     else:
-        Crypto = CDLL("./lora_encrypt/libloraCrypto.so")
+        Crypto = CDLL(sys_path + "/lora_encrypt/libloraCrypto.so")
 
     @staticmethod
     def compute_mic(msg, key, address, dir, sequenceCounter):
