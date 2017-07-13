@@ -97,6 +97,8 @@ The input data are bytes and output is a PHYPayload object.
         - Int type.
     - ack
         - Signal this is an ack message.
+    - class_b
+        - Signal the message is sent by a class B device.
     - do_mic_check
         - Same as in class PHYPayload
     - do_decrypto_check
