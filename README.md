@@ -1,19 +1,24 @@
-# LoRaWANProtocol
+# lorawanprotocol
 The package can analysis parameter of the standard lorawan protocol(1.02) from lorawan data，including mac command, payload and so on.
 The input data are bytes and output is a PHYPayload object.
 
 # Install
-- To use the ASE128 encrypto function, you need to run below command to generate the libloraCrypto.so:
+1. Download the package.
+2. To use the ASE128 encrypto function, you need to run below command to generate the libloraCrypto.so:
     ```
     $ cd lora_encrypt
     $ make so
+    ```
+3. Run the below command after generate the libloraCrypto.so:
+    ```
+    $ python3 setup.py install
     ```
 
 # Usage
 
 ## Simple example:
 ```
->>> from phypayload import PHYPayload
+>>> from lorawanprotocol.phypayload import PHYPayload
 >>> phypayload = PHYPayload.analysis(your_phypaylaod_data)
 >>> absort_data = phypayload.absort()
 ```
