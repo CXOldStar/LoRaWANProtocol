@@ -1,10 +1,10 @@
 from distutils.core import setup
 
 setup(
-    name='LoRaWANProtocol',
+    name='lorawanprotocol',
     version='0.0.1',
-    packages=['', 'LoRaWANProtocol'],
-    url='https://github.com/CXOldStar/LoRaWANProtocol',
+    packages=['', 'lorawanprotocol'],
+    url='https://github.com/CXOldStar/lorawanprotocol',
     license='MIT',
     author='ChenXing',
     author_email='cxoldstar@gmail.com',
